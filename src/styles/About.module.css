@@ -1,0 +1,59 @@
+.aboutSection {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Középre igazítja a tartalmat */
+    padding: 2rem;
+    flex-wrap: wrap; /* Hogy kisebb képernyőkön ne lógjon ki */
+  }
+  
+  .aboutContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* A kép és a szöveg közötti tér */
+    max-width: 1200px; /* Max szélesség beállítása, hogy ne nyúljon túl */
+    width: 100%; /* Alkalmazkodjon az oldal szélességéhez */
+    gap: 20px; /* Hézag a kép és a szöveg között */
+    flex-wrap: wrap; /* Biztosítja, hogy kisebb képernyőméret esetén a szöveg és kép megfelelően rendeződjön */
+  }
+  
+  .aboutImage {
+    flex: 1 1 40%; /* A kép szélessége rugalmasan változik, 40%-ra korlátozva */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-right: 20px; /* Hézag a kép és a szöveg között */
+    border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+        .aboutSection {
+            flex-direction: column; /* A kép és szöveg egymás alá kerül */
+        }
+    
+        .aboutImage {
+            margin-right: 0; /* Megszünteti a jobb margót kis képernyőn */
+            margin-bottom: 1rem; /* Távolságot ad a szöveg előtt */
+        }
+    }    
+
+  .aboutText {
+    flex: 2; /* A szöveg nagyobb helyet kapjon */
+    max-width: 600px; /* Max szélesség a szövegre */
+    text-align: justify; /* Sorkizárt szöveg */
+  }
+  
+  /* Az `Image` komponensben alkalmazott képméret kezelése */
+  .aboutImage {
+    flex: 1 1 40%;
+    max-width: 300px; /* A kép maximális szélessége, hogy ne legyen túl nagy */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
+  .aboutParagraph {
+    color: black;
+    text-align: justify;
+  }
+  

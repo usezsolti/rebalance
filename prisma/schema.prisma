@@ -1,0 +1,29 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  firstName   String   // Keresztnév
+  lastName    String   // Vezetéknév
+  email       String   @unique
+  phone       String
+  password    String
+  city        String
+  postalCode  String
+  address     String   // Lakcím (Utca, Épület, Emelet, Házszám)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model BlogPost {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+}

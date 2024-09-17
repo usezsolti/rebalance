@@ -1,0 +1,46 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Középre igazítja a tartalmat vízszintesen */
+  justify-content: center; /* Középre igazítja a tartalmat függőlegesen */
+  padding: 2rem;
+  text-align: center; /* Középre igazítja a szöveget */
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Középre igazítja a tartalmat vízszintesen */
+  max-width: 800px; /* Beállítja a maximális szélességet */
+}
+
+.aboutImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; /* Kör alakú kép */
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.aboutText {
+  margin-bottom: 2rem;
+}
+
+.contactButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contactButton:hover {
+  background-color: #555;
+}
+
+.aboutParagraph {
+  color: black;
+  text-align: justify;
+}
+  
