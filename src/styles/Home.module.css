@@ -1,4 +1,7 @@
 /* styles/Home.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .hero {
   background-image: url('home.jpg'); /* A kép útvonala */
   background-size: cover;
@@ -8,7 +11,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column; /* A szöveget és a címet egymás alá rendezi */
-  color: white; /* Fehér szövegszín */
+  color: #EEDFDE; /* Fehér szövegszín */
   text-align: center;
 }
 
@@ -42,7 +45,7 @@
 }
 
 .priceCard {
-  background-color: #f5f5f5; /* Világosszürke háttér */
+  background-color: #ABBE92; /* Világosszürke háttér */
   padding: 2rem;
   border-radius: 8px;
   width: 300px;
@@ -85,7 +88,8 @@
 /* Kapcsolat szekció stílusai */
 .contactSection {
   display: flex;
-  justify-content: space-between;
+  gap: 10%;
+  justify-content: center;
   align-items: flex-start;
   padding: 4rem 2rem;
 }
