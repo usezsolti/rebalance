@@ -57,7 +57,7 @@ export default function Home() {
               Fő célom, hogy a masszázzsal a hozzám forduló vendégek számára
               professzionális kezeléseket nyújthassak, így hozzásegíthessem őket
               problémáik komplexebb megértéséhez, ezáltal életminőségük javulásához.
-              Sok szeretettel várom minden felfrissülni, relaxálni vágyó vendégemet!
+ 
             </p>
             <p className={aboutStyles.aboutParagraph}>
               Sok szeretettel várom minden felfrissülni, relaxálni vágyó vendégemet!
