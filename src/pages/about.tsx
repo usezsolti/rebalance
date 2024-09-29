@@ -21,22 +21,14 @@ export default function About() {
       <div className={styles.aboutText}>
             <h2>Rigó Eszter</h2>
             <p className={styles.aboutParagraph}>
-              <strong>2017-ben végeztem okleveles Gyógy- és sportmasszőrként.</strong> Tapasztalataimat <strong>Szent Gellért Gyógyfürdőben </strong>
-              szereztem, ahol <strong>reumatológiai és ortopédiai megbetegedések kezelésével foglalkoztam.</strong>
+                  Rigó Eszter okleveles masszőr vagyok. 2017 óta dolgozom masszőrként. Több éves tapasztalatomat gyógyfürdőben, kórházban, valamint magánredelőben szereztem.
             </p>
             <p className={styles.aboutParagraph}>
-              <strong>Ergoterapeutaként 2019-ben végeztem</strong>, először a <strong>Szent János Kórházban</strong> 
-              , <strong>később a Szent Margit Kórház mozgásszervi rehabilitációs osztályán ergoterápiás foglalkozásokat tartottam. </strong>
-              Az itt szerzett tapasztalataimmal szeretnék segíteni a stroke-on átesett, illetve szerezett agysérüléssel küzdő betegeknek.
+                  Fő célom, hogy a masszázzsal a hozzám forduló vendégek számára professzionális kezeléseket nyújthassak, így hozzásegíthessem őket problémáik komplexebb megértéséhez, ezáltal életminőségük javulásához.
+                  Sok szeretettel várom minden felfrissülni, relaxálni vágyó vendégemet!
             </p>
             <p className={styles.aboutParagraph}>
-              <strong>Fő profilom a neurológiai betegségek rehabilitációja. </strong>
-              A fogalalkozásaim során felső végtagi kis- és nagy ízületi mozgásokat, 
-              a finommotorikus mozgásokat, a kognitív- és önellátási funkciókat fejlesztem.
-            </p>
-            <p className={styles.aboutParagraph}>
-              <strong>Fontosnak tartom szaktudásom folyamatos bővítését, fejlesztését, hogy páciensem számára professzionális kezeléseket nyújthassak
-                </strong>, hozzásegíthessem őket problémáik jobb megértéséhez, ezáltal <strong>életminőségük javulásához.</strong>
+                  Sok szeretettel várom minden felfrissülni, relaxálni vágyó vendégemet!
             </p>
             
             {/* Új gomb, ami a Kapcsolat oldalra irányít */}
