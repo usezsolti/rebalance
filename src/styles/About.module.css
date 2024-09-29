@@ -1,59 +1,73 @@
 .aboutSection {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Középre igazítja a tartalmat */
-    padding: 2rem;
-    flex-wrap: wrap; /* Hogy kisebb képernyőkön ne lógjon ki */
-  }
-  
-  .aboutContent {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* A kép és a szöveg közötti tér */
-    max-width: 1200px; /* Max szélesség beállítása, hogy ne nyúljon túl */
-    width: 100%; /* Alkalmazkodjon az oldal szélességéhez */
-    gap: 20px; /* Hézag a kép és a szöveg között */
-    flex-wrap: wrap; /* Biztosítja, hogy kisebb képernyőméret esetén a szöveg és kép megfelelően rendeződjön */
-  }
-  
-  .aboutImage {
-    flex: 1 1 40%; /* A kép szélessége rugalmasan változik, 40%-ra korlátozva */
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-right: 20px; /* Hézag a kép és a szöveg között */
-    border-radius: 5px;
-    }
-
-    @media (max-width: 768px) {
-        .aboutSection {
-            flex-direction: column; /* A kép és szöveg egymás alá kerül */
-        }
-    
-        .aboutImage {
-            margin-right: 0; /* Megszünteti a jobb margót kis képernyőn */
-            margin-bottom: 1rem; /* Távolságot ad a szöveg előtt */
-        }
-    }    
-
-  .aboutText {
-    flex: 2; /* A szöveg nagyobb helyet kapjon */
-    max-width: 600px; /* Max szélesség a szövegre */
-    text-align: justify; /* Sorkizárt szöveg */
-  }
-  
-  /* Az `Image` komponensben alkalmazott képméret kezelése */
-  .aboutImage {
-    flex: 1 1 40%;
-    max-width: 300px; /* A kép maximális szélessége, hogy ne legyen túl nagy */
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Egyenletesen osztja el a kép és szöveg közötti teret */
+  padding: 2rem;
+  flex-wrap: wrap;
+  opacity: 0; /* Kezdetben láthatatlan */
+  transition: opacity 1s ease-out; /* Az animáció megjelenése */
 }
 
-  .aboutParagraph {
-    color: black;
+.fadeIn {
+  opacity: 1; /* Az animáció során megjelenik */
+}
+
+.aboutContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px; /* 20px hézag a kép és a szöveg között */
+  flex-wrap: wrap;
+}
+
+.aboutImage {
+  flex: 1 1 30%; /* A kép szélessége, kisebb mint 40%, hogy ne legyen túl nagy a szöveghez képest */
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 2rem; /* Hézag a kép és a szöveg között */
+}
+
+.aboutText {
+  flex: 1 1 50%;
+  max-width: 600px;
+  text-align: justify;
+  padding: 20px; /* Térköz a szöveg körül */
+  background-color: #ABBE92; /* Világos szürke háttérszín */
+  border-radius: 10px; /* Lekerekített sarkok */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék a doboz körül */
+}
+
+
+.aboutParagraph {
+  margin-bottom: 1rem; /* A bekezdések közötti távolság */
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    flex-direction: column; /* Kisebb képernyőn a kép és szöveg egymás alá kerül */
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutImage {
+    margin-right: 0;
+    margin-bottom: 1rem; /* Távolság a kép és a szöveg között mobilon */
+  }
+
+  .aboutText {
+    flex: 1 1 50%;
+    max-width: 600px;
     text-align: justify;
+    padding: 20px; /* Térköz a szöveg körül */
+    background-color: #f0f0f0; /* Világos szürke háttérszín */
+    border-radius: 10px; /* Lekerekített sarkok */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék a doboz körül */
   }
   
+}
