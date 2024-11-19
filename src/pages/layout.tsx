@@ -1,4 +1,3 @@
-import '../styles/globals.css'; // Importáljuk a globális stílusokat
 import Head from 'next/head'; // Importáljuk a Head komponenst
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

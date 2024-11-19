@@ -1,18 +1,19 @@
 /* styles/Home.module.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-
+/* Hero szekció */
 .hero {
-  background-image: url('home.jpg'); /* A kép útvonala */
+  background-image: url('home.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Magasság: teljes képernyő */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* A szöveget és a címet egymás alá rendezi */
-  color: #EEDFDE; /* Fehér szövegszín */
+  flex-direction: column;
+  color: #EEDFDE;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .title {
@@ -24,6 +25,24 @@
 .subtitle {
   font-size: 1.5rem;
   margin-top: 10px;
+}
+
+/* Média lekérdezések a hero szekcióhoz */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
 }
 
 /* Árlista szekció stílusai */
@@ -41,15 +60,17 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* Mobilnézethez */
+  flex-wrap: wrap;
 }
 
 .priceCard {
-  background-color: #ABBE92; /* Világosszürke háttér */
+  background-color: #ABBE92;
   padding: 2rem;
   border-radius: 8px;
-  width: 300px;
+  flex: 1 1 300px;
+  max-width: 400px;
   text-align: left;
+  margin: 1rem;
 }
 
 .priceCard h3 {
@@ -88,14 +109,17 @@
 /* Kapcsolat szekció stílusai */
 .contactSection {
   display: flex;
-  gap: 10%;
+  flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
   align-items: flex-start;
   padding: 4rem 2rem;
 }
 
-.contactInfo {
-  max-width: 40%;
+.contactInfo,
+.mapContainer {
+  flex: 1 1 300px;
+  max-width: 500px;
 }
 
 .contactInfo h2 {
@@ -117,17 +141,37 @@
   text-decoration: underline;
 }
 
-.mapContainer {
-  max-width: 50%;
-  height: auto;
-}
-
 .mapContainer iframe {
   width: 100%;
-  height: 450px;
+  height: 300px;
   border: none;
 }
 
 .workhours {
   color: black;
+}
+
+/* Média lekérdezések a reszponzivitáshoz */
+@media (max-width: 768px) {
+  /* Kapcsolat szekció */
+  .contactSection {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactInfo,
+  .mapContainer {
+    max-width: 100%;
+  }
+  .mapContainer iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Árlista szekció */
+  .priceCard {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
 }

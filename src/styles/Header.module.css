@@ -1,9 +1,9 @@
 /* Alap stílusok */
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  justify-content: space-between;
+  padding: 1rem;
   background-color: #EEDFDE;
   position: sticky;
   top: 0;
@@ -11,22 +11,38 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Logó stílus - Kép megjelenítése a link háttereként */
-.logo a {
-  display: block; /* Biztosítsd, hogy a <a> blokk elemként viselkedjen */
-  width: 300px; /* Állítsd be a logó szélességét */
-  height: 100px; /* Állítsd be a logó magasságát */
-  background-image: url('logo.png'); /* A logó kép elérési útja */
-  background-size: contain; /* Méretarányos skálázás */
-  background-repeat: no-repeat; /* Ne ismétlődjön a kép */
-  background-position: center; /* A kép középen helyezkedjen el */
-  text-indent: -9999px; /* Rejtsd el a szöveget a képen */
+/* Logó stílus */
+.logo {
+  margin-right: auto;
 }
 
+.logo a {
+  display: block;
+  width: 150px; /* Csökkentett szélesség */
+  height: 50px; /* Csökkentett magasság */
+  background-image: url('logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center; /* Balra igazítás */
+  text-indent: -9999px;
+}
+
+/* Hamburger ikon */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Navigációs sáv */
+.nav {
+  display: flex;
+  align-items: center;
+}
 
 .nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -42,21 +58,21 @@
   font-size: 1rem;
 }
 
-  /* Foglalás gomb stílusa */
-  .bookingButton {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+/* Foglalás gomb stílusa */
+.bookingButton {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  .bookingButton a {
-    color: white;
-    text-decoration: none;
-  }
+.bookingButton:hover {
+  background-color: #333;
+}
 
+/* Instagram ikon */
 .instagramIcon {
   font-size: 1.5rem;
   color: #333;
@@ -66,49 +82,59 @@
   color: #C657A0;
 }
 
-/* Hamburger menü ikon stílusok */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  width: 30px;
-  height: 22px;
-}
-
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: black;
-  border-radius: 2px;
-}
-
-/* Reszponzív stílusok */
+/* Mobil nézet */
 @media (max-width: 768px) {
-  .nav ul {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
+  /* Hamburger ikon megjelenítése */
+  .hamburger {
+    display: block;
+  }
+
+  /* Navigációs sáv rejtése alapértelmezetten */
+  .nav {
     position: absolute;
-    top: 100%;
+    top: 60px; /* A header magassága */
     left: 0;
     width: 100%;
-    background-color: white;
-    padding: 1rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #EEDFDE;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .nav.open ul {
-    display: flex;
+  /* Navigációs sáv megjelenítése, ha nyitva */
+  .nav.open {
+    max-height: 300px; /* Állítsd be a megfelelő magasságot */
+    transition: max-height 0.3s ease-in;
   }
 
-  /* Hamburger ikon megjelenítése mobilon */
-  .hamburger {
-    display: flex;
+  .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav ul li {
+    width: 100%;
+    text-align: center;
   }
 
   .bookingButton {
-    width: 100%;
+    width: 80%;
+    margin: 0.5rem 0;
+  }
+
+  /* Header padding csökkentése */
+  .header {
+    padding: 0.5rem;
+  }
+
+  /* Logó méretének csökkentése */
+  .logo a {
+    width: 120px;
+    height: 40px;
+    background-position: left center;
   }
 }

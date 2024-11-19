@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import Link from 'next/link';
-import styles from '../styles/Header.module.css'; // Importáljuk a CSS modulokat a stílusokhoz
-import { FaInstagram } from 'react-icons/fa';
+import styles from '../styles/Header.module.css';
+import { FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className={styles.header}>
       {/* Logó */}
@@ -10,21 +17,31 @@ export default function Header() {
         <Link href="/">REbalance</Link>
       </div>
 
+      {/* Hamburger ikon */}
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
       {/* Navigációs sáv */}
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul>
           <li><Link href="/about">Rólam</Link></li>
           <li><Link href="/prices">Árak</Link></li>
           <li><Link href="/contact">Kapcsolat</Link></li>
           {/* Instagram ikon */}
           <li>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.instagramIcon}>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.instagramIcon}
+            >
               <FaInstagram />
             </a>
           </li>
           {/* Foglalás gomb */}
           <li>
-          <button
+            <button
               onClick={() => window.location.href = 'https://app.minup.io/book/rigo-eszter'}
               className={styles.bookingButton}
             >
