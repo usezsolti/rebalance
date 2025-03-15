@@ -1,18 +1,21 @@
 import styles from '../styles/Home.module.css'; // Importáld a CSS modult
-import aboutStyles from '../styles/About.module.css';
-import Image from 'next/image'; // Importáld az Image komponenst
+import Footer from '../components/Footer';
 
-
-export default function Home() {
+export default function Prices() {
   return (
-    <div>
-    <section className={styles.pricingSection}>
+    <>
+      <div className={styles.pricingSection}>
         <h2 className={styles.pricingTitle}>Árlista</h2>
         <div className={styles.pricingContainer}>
             <div className={styles.priceCard}>
                 <h3>40 perces</h3>
                 <p className={styles.price}>7500 FT</p>
-                <button className={styles.bookingButton}>Foglalj most!</button>
+                <button
+                    onClick={() => window.location.href = 'https://app.minup.io/book/rigo-eszter'}
+                    className={styles.bookingButton}
+                >
+                    Foglalj most!
+                </button>
                 <ul className={styles.featuresList}>
                     <li>✔ Hát</li>
                     <li>✔ Nyak</li>
@@ -22,7 +25,12 @@ export default function Home() {
             <div className={styles.priceCard}>
                 <h3>60 perces</h3>
                 <p className={styles.price}>13000 Ft</p>
-                <button className={styles.bookingButton}>Foglalj most!</button>
+                <button
+                    onClick={() => window.location.href = 'https://app.minup.io/book/rigo-eszter'}
+                    className={styles.bookingButton}
+                >
+                    Foglalj most!
+                </button>
                 <ul className={styles.featuresList}>
                     <li>✔ Hát</li>
                     <li>✔ Nyak</li>
@@ -31,7 +39,8 @@ export default function Home() {
                 </ul>
             </div>
         </div>
-    </section>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }

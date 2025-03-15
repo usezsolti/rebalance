@@ -1,73 +1,153 @@
 .aboutSection {
   display: flex;
   align-items: center;
-  justify-content: space-around; /* Egyenletesen osztja el a kép és szöveg közötti teret */
-  padding: 2rem;
+  justify-content: center;
+  padding: 4rem 2rem;
   flex-wrap: wrap;
-  opacity: 0; /* Kezdetben láthatatlan */
-  transition: opacity 1s ease-out; /* Az animáció megjelenése */
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
 }
 
 .fadeIn {
-  opacity: 1; /* Az animáció során megjelenik */
+  opacity: 1;
 }
 
 .aboutContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
   width: 100%;
-  gap: 20px; /* 20px hézag a kép és a szöveg között */
+  max-width: 1000px;
+  gap: 3rem;
   flex-wrap: wrap;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 3rem;
 }
 
 .aboutImage {
-  flex: 1 1 30%; /* A kép szélessége, kisebb mint 40%, hogy ne legyen túl nagy a szöveghez képest */
-  max-width: 300px;
-  width: 100%;
-  height: auto;
+  flex: 0 0 250px;
+  width: 250px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 5px;
-  margin-right: 2rem; /* Hézag a kép és a szöveg között */
+  border-radius: 10px;
+  margin: 0 auto;
+  border: 8px solid #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.aboutImage:hover {
+  transform: scale(1.02);
 }
 
 .aboutText {
-  flex: 1 1 50%;
+  flex: 1;
   max-width: 600px;
   text-align: justify;
-  padding: 20px; /* Térköz a szöveg körül */
-  background-color: #ABBE92; /* Világos szürke háttérszín */
-  border-radius: 10px; /* Lekerekített sarkok */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék a doboz körül */
+  padding: 2rem;
+  background-color: #ABBE92;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
+.aboutText h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.aboutText h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+}
 
 .aboutParagraph {
-  margin-bottom: 1rem; /* A bekezdések közötti távolság */
-  color: black;
+  margin-bottom: 1.5rem;
+  color: #333;
+  line-height: 1.8;
+  font-size: 1.05rem;
 }
 
 @media (max-width: 768px) {
   .aboutSection {
-    flex-direction: column; /* Kisebb képernyőn a kép és szöveg egymás alá kerül */
-    align-items: center;
-    text-align: center;
+    padding: 3rem 1.5rem;
+    margin: 2rem auto;
+  }
+  
+  .aboutContent {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
   }
 
   .aboutImage {
-    margin-right: 0;
-    margin-bottom: 1rem; /* Távolság a kép és a szöveg között mobilon */
+    margin: 0 auto 1rem;
+    width: 220px;
+    height: 270px;
+    border-width: 6px;
   }
 
   .aboutText {
-    flex: 1 1 50%;
-    max-width: 600px;
-    text-align: justify;
-    padding: 20px; /* Térköz a szöveg körül */
-    background-color: #f0f0f0; /* Világos szürke háttérszín */
-    border-radius: 10px; /* Lekerekített sarkok */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék a doboz körül */
+    padding: 1.5rem;
+    max-width: 100%;
   }
   
+  .aboutText h2 {
+    font-size: 1.8rem;
+  }
+  
+  .aboutParagraph {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 2rem 1rem;
+    margin: 1.5rem auto;
+  }
+  
+  .aboutContent {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .aboutImage {
+    width: 180px;
+    height: 230px;
+    border-width: 5px;
+  }
+  
+  .aboutText {
+    padding: 1.2rem;
+  }
+  
+  .aboutText h2 {
+    font-size: 1.6rem;
+    padding-bottom: 0.8rem;
+  }
+  
+  .aboutText h2::after {
+    width: 50px;
+    height: 2px;
+  }
+  
+  .aboutParagraph {
+    margin-bottom: 1.2rem;
+  }
 }

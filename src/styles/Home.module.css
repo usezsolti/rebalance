@@ -43,17 +43,39 @@
   }
   .subtitle {
     font-size: 1rem;
+  }
 }
 
 /* Árlista szekció stílusai */
 .pricingSection {
   text-align: center;
   padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .pricingTitle {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.pricingTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #ABBE92;
 }
 
 .pricingContainer {
@@ -61,24 +83,34 @@
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .priceCard {
   background-color: #ABBE92;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   flex: 1 1 300px;
   max-width: 400px;
   text-align: left;
   margin: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.priceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .priceCard h3 {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .price {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 1rem 0;
   color: black;
@@ -95,15 +127,24 @@
   border-radius: 5px;
   cursor: pointer;
   margin: 1.5rem 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+}
+
+.bookingButton:hover {
+  background-color: #333;
+  transform: translateY(-3px);
 }
 
 .featuresList {
   list-style-type: none;
   padding: 0;
+  margin-top: 1.5rem;
 }
 
 .featuresList li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
 }
 
 /* Kapcsolat szekció stílusai */
@@ -111,67 +152,148 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 4rem 2rem;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  max-width: 1200px;
+  margin: 3rem auto;
 }
 
-.contactInfo,
+.contactInfo {
+  flex: 1 1 350px;
+  max-width: 550px;
+  background-color: #ABBE92;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
 .mapContainer {
-  flex: 1 1 300px;
-  max-width: 500px;
+  flex: 1 1 450px;
+  max-width: 600px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  min-height: 450px;
+  display: flex;
 }
 
 .contactInfo h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.contactInfo h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
 }
 
 .contactInfo h3 {
   font-size: 1.5rem;
   margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .contactInfo p {
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
 }
 
 .contactInfo a {
-  color: #000;
+  color: #333;
   text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.contactInfo a:hover {
+  color: #000;
 }
 
 .mapContainer iframe {
   width: 100%;
-  height: 300px;
+  height: 450px;
   border: none;
+  display: block;
+  flex: 1;
 }
 
 .workhours {
-  color: black;
+  color: #333;
+  font-size: 1.05rem;
 }
 
 /* Média lekérdezések a reszponzivitáshoz */
 @media (max-width: 768px) {
+  .pricingSection {
+    padding: 3rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
   /* Kapcsolat szekció */
   .contactSection {
     flex-direction: column;
     align-items: center;
+    margin: 2rem auto;
   }
+  
   .contactInfo,
   .mapContainer {
     max-width: 100%;
+    width: 100%;
   }
+  
+  .contactInfo {
+    padding: 2rem;
+  }
+  
+  .mapContainer {
+    width: 100%;
+    max-width: 100%;
+    min-height: 320px;
+  }
+  
   .mapContainer iframe {
-    height: 250px;
+    height: 320px;
   }
 }
 
 @media (max-width: 480px) {
+  .pricingSection {
+    padding: 2rem 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
   /* Árlista szekció */
   .priceCard {
     flex: 1 1 100%;
     max-width: 100%;
+    margin: 0.8rem 0;
   }
-}
+  
+  .contactInfo {
+    padding: 1.5rem;
+  }
+  
+  .contactInfo h2 {
+    font-size: 2rem;
+  }
+  
+  .mapContainer {
+    min-height: 280px;
+  }
+  
+  .mapContainer iframe {
+    height: 280px;
+  }
 }

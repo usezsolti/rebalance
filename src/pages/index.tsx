@@ -134,9 +134,10 @@ export default function Home() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10663.007737309014!2d19.044992!3d47.514236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc6f7bf926e3%3A0x400c4290c1d68c0!2sBudapest%2C%20Taksony%20u.%201%2C%201134!5e0!3m2!1shu!2shu!4v1631543272970!5m2!1shu!2shu"
             width="100%"
             height="450"
-            style={{ border: 0 }}
+            style={{ border: 0, display: 'block' }}
             allowFullScreen
             loading="lazy"
+            title="REbalance helyszín térkép"
           ></iframe>
         </div>
       </section>
