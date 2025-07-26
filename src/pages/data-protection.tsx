@@ -17,7 +17,7 @@ const DataProtection = () => {
           
           <section className={styles.section}>
             <h2>1. Bevezetés</h2>
-            <p>Ez az adatvédelmi tájékoztató elmagyarázza, hogy a REbalance ("mi", "minket", "miénk") hogyan gyűjti, használja és védi a személyes adatait, amikor weboldalunkat és szolgáltatásainkat használja. Elkötelezettek vagyunk az adatvédelme biztosítása és a személyes adatok biztonságának megőrzése mellett.</p>
+            <p>Ez az adatvédelmi tájékoztató elmagyarázza, hogy a REbalance (&ldquo;mi&rdquo;, &ldquo;minket&rdquo;, &ldquo;miénk&rdquo;) hogyan gyűjti, használja és védi a személyes adatait, amikor weboldalunkat és szolgáltatásainkat használja. Elkötelezettek vagyunk az adatvédelme biztosítása és a személyes adatok biztonságának megőrzése mellett.</p>
           </section>
 
           <section className={styles.section}>
