@@ -20,7 +20,7 @@ const Footer = () => {
             <li><Link href="/about" legacyBehavior><a>Rólam</a></Link></li>
             <li><Link href="/prices" legacyBehavior><a>Árak</a></Link></li>
             <li><Link href="/contact" legacyBehavior><a>Kapcsolat</a></Link></li>
-            <li><Link href="/privacy-policy" legacyBehavior><a>Adatvédelem</a></Link></li>
+            <li><Link href="/data-protection" legacyBehavior><a>Adatvédelem</a></Link></li>
           </ul>
         </div>
         
@@ -54,6 +54,12 @@ const Footer = () => {
       
       <div className={styles.copyright}>
         <p>&copy; {new Date().getFullYear()} REbalance. Minden jog fenntartva.</p>
+      </div>
+      
+      <div className={styles.legalLinks}>
+        <Link href="/imprint" legacyBehavior><a>Impresszum</a></Link>
+        <span className={styles.separator}>|</span>
+        <Link href="/data-protection" legacyBehavior><a>Adatvédelem</a></Link>
       </div>
     </footer>
   );

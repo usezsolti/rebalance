@@ -151,39 +151,55 @@
 .contactSection {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: space-between;
   align-items: stretch;
   padding: 0;
   max-width: 1200px;
-  margin: 3rem auto;
+  margin: 4rem auto;
 }
 
 .contactInfo {
-  flex: 1 1 350px;
-  max-width: 550px;
+  flex: 1 1 400px;
+  max-width: 500px;
   background-color: #ABBE92;
-  padding: 3rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 3.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contactInfo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #95a970, #8a9a65);
 }
 
 .mapContainer {
-  flex: 1 1 450px;
-  max-width: 600px;
-  border-radius: 15px;
+  flex: 1 1 500px;
+  max-width: 650px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
   min-height: 450px;
   display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .contactInfo h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #333;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #fff;
   position: relative;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contactInfo h2::after {
@@ -191,31 +207,48 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 60px;
-  height: 3px;
-  background-color: #fff;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.8));
+  border-radius: 2px;
 }
 
 .contactInfo h3 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contactInfo h3:first-of-type {
+  margin-top: 0;
 }
 
 .contactInfo p {
-  margin: 0.8rem 0;
-  font-size: 1.05rem;
+  margin: 0.6rem 0;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .contactInfo a {
-  color: #333;
-  text-decoration: underline;
-  transition: color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .contactInfo a:hover {
-  color: #000;
+  color: #f0f0f0;
+  border-bottom-color: #fff;
+  transform: translateY(-1px);
 }
 
 .mapContainer iframe {
@@ -227,8 +260,16 @@
 }
 
 .workhours {
-  color: #333;
-  font-size: 1.05rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-left: 3px solid rgba(255, 255, 255, 0.8);
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0 8px 8px 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Média lekérdezések a reszponzivitáshoz */
@@ -243,7 +284,8 @@
   .contactSection {
     flex-direction: column;
     align-items: center;
-    margin: 2rem auto;
+    margin: 3rem auto;
+    gap: 2rem;
   }
   
   .contactInfo,
@@ -253,17 +295,17 @@
   }
   
   .contactInfo {
-    padding: 2rem;
+    padding: 2.5rem;
   }
   
   .mapContainer {
     width: 100%;
     max-width: 100%;
-    min-height: 320px;
+    min-height: 350px;
   }
   
   .mapContainer iframe {
-    height: 320px;
+    height: 350px;
   }
 }
 
@@ -282,18 +324,22 @@
   }
   
   .contactInfo {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   
   .contactInfo h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+  
+  .contactInfo h3 {
+    font-size: 1.4rem;
   }
   
   .mapContainer {
-    min-height: 280px;
+    min-height: 300px;
   }
   
   .mapContainer iframe {
-    height: 280px;
+    height: 300px;
   }
 }
