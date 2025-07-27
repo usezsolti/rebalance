@@ -119,10 +119,12 @@ export default function Home() {
           </p>
 
           <h3>Munkaidő</h3>
-          <p className={styles.workhours}>Hétfő: 15-20</p>
-          <p className={styles.workhours}>Kedd: 15-20</p>
-          <p className={styles.workhours}>Csütörtök: 8-12</p>
-          <p className={styles.workhours}>Szombat: 8-13</p>
+          <p className={styles.workhours}>Hétfő 14.00-20.00</p>
+          <p className={styles.workhours}>Kedd 11.00-18.30</p>
+          <p className={styles.workhours}>Szerda 14.00-20.00</p>
+          <p className={styles.workhours}>Csütörtök 10.00-18.00</p>
+          <p className={styles.workhours}>Péntek 09.00-14.00</p>
+          <p className={styles.workhours}>Szombat: 7.45-13.00</p>
 
           <h3>Kapcsolat</h3>
           <p><a href="tel:+36307140591">+36307140591</a></p>

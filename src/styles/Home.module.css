@@ -20,11 +20,13 @@
   font-size: 5rem;
   font-weight: bold;
   margin: 0;
+  color: #fff;
 }
 
 .subtitle {
   font-size: 1.5rem;
   margin-top: 10px;
+  color: #fff;
 }
 
 /* Média lekérdezések a hero szekcióhoz */
@@ -153,7 +155,7 @@
   flex-wrap: wrap;
   gap: 3rem;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: flex-start;
   padding: 0;
   max-width: 1200px;
   margin: 4rem auto;
@@ -171,15 +173,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contactInfo::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #95a970, #8a9a65);
-}
+
 
 .mapContainer {
   flex: 1 1 500px;
@@ -187,7 +181,7 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  min-height: 450px;
+  min-height: 225px;
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }

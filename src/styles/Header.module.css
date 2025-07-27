@@ -56,6 +56,14 @@
   text-decoration: none;
   color: black;
   font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav ul li a:hover {
+  transform: scale(1.05);
 }
 
 /* Foglalás gomb stílusa */
@@ -64,22 +72,30 @@
   color: white;
   padding: 8px 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .bookingButton:hover {
   background-color: #333;
+  transform: scale(1.05);
 }
 
 /* Instagram ikon */
 .instagramIcon {
   font-size: 1.5rem;
   color: #333;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .instagramIcon:hover {
   color: #C657A0;
+  transform: scale(1.1);
 }
 
 /* Mobil nézet */
@@ -121,9 +137,22 @@
     text-align: center;
   }
 
+  .nav ul li a {
+    display: block;
+    padding: 12px 16px;
+    margin: 4px 0;
+    border-radius: 25px;
+  }
+
   .bookingButton {
     width: 80%;
     margin: 0.5rem 0;
+    border-radius: 25px;
+  }
+
+  .instagramIcon {
+    padding: 12px;
+    margin: 4px 0;
   }
 
   /* Header padding csökkentése */

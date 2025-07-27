@@ -31,7 +31,7 @@ export default function Header() {
           {/* Instagram ikon */}
           <li>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/rigoeszter/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.instagramIcon}
