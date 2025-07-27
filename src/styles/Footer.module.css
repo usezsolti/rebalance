@@ -22,8 +22,9 @@
 .footerSection h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
   position: relative;
+  color: #fff;
 }
 
 .footerSection h3::after {
@@ -51,6 +52,17 @@
 
 .footerSection ul li {
   margin-bottom: 0.8rem;
+}
+
+/* Navigációs linkek két oszlopba rendezése */
+.footerSection:nth-child(2) ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.footerSection:nth-child(2) ul li {
+  margin-bottom: 0.5rem;
 }
 
 .footerSection ul li a {
@@ -111,37 +123,7 @@
   color: #fff !important;
 }
 
-.copyright {
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #555;
-  font-size: 0.9rem;
-  color: #aaa;
-}
 
-.legalLinks {
-  text-align: center;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  font-size: 0.85rem;
-  color: #aaa;
-}
-
-.legalLinks a {
-  color: #aaa;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.legalLinks a:hover {
-  color: #ABBE92;
-}
-
-.separator {
-  margin: 0 0.5rem;
-  color: #666;
-}
 
 /* Reszponzív stílusok */
 @media (max-width: 768px) {

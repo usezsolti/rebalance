@@ -21,6 +21,7 @@ const Footer = () => {
             <li><Link href="/prices" legacyBehavior><a>Árak</a></Link></li>
             <li><Link href="/contact" legacyBehavior><a>Kapcsolat</a></Link></li>
             <li><Link href="/data-protection" legacyBehavior><a>Adatvédelem</a></Link></li>
+            <li><Link href="/imprint" legacyBehavior><a>Impresszum</a></Link></li>
           </ul>
         </div>
         
@@ -34,10 +35,10 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <h3>Kövess</h3>
           <div className={styles.socialIcons}>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://www.instagram.com/rigoeszter/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram className={styles.socialIcon} />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/eszter.rigo.9?locale=hu_HU" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebook className={styles.socialIcon} />
             </a>
           </div>
@@ -50,16 +51,6 @@ const Footer = () => {
             Foglalj időpontot
           </a>
         </div>
-      </div>
-      
-      <div className={styles.copyright}>
-        <p>&copy; {new Date().getFullYear()} REbalance. Minden jog fenntartva.</p>
-      </div>
-      
-      <div className={styles.legalLinks}>
-        <Link href="/imprint" legacyBehavior><a>Impresszum</a></Link>
-        <span className={styles.separator}>|</span>
-        <Link href="/data-protection" legacyBehavior><a>Adatvédelem</a></Link>
       </div>
     </footer>
   );
